@@ -1,0 +1,18 @@
+.siteHeader{
+    --bg-color: var(--dark-color);
+    --text-color: var(--brand-color);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 3em;
+    padding: 1em 1em .5em;
+    background-color: var(--bg-color);
+    color:  var(--text-color);
+}
+
+.siteHeader__brand{
+    text-decoration: none;
+    color: var(--text-color);
+}

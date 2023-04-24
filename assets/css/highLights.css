@@ -1,0 +1,9 @@
+
+.highlights__image {
+    width: 100%;
+    height: auto;
+}
+
+.highlights__heading, .highlights__text {
+    padding: 0 1em;
+}

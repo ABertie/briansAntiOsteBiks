@@ -1,0 +1,43 @@
+.burgerMenuButton {
+    --text-color: var(--mid-color);
+
+    border: none;
+    background: transparent;
+    color: var(--text-color);
+}
+
+.primaryNav {
+    --bg-color: var(--mid-color);
+    --text-color: var(--dark-color);
+    
+    display: block;
+    
+    position: absolute;
+    inset: 3em 0 auto auto;
+    
+    height: calc(100vh - 3em);
+    width: 80%;
+    padding: 1em;
+    background-color: var(--bg-color);
+
+    transform: translateX(100%);
+    transition: transform .5s ease-in-out;
+}
+
+.primaryNav--show {    
+    transform: translateX(0);
+}
+
+.primaryNav__menu {
+/*     display: flex;
+    justify-content: space-between;
+    */
+    display: grid;
+    gap: .5em;
+    list-style: none;
+}
+
+.primaryNav__Link{
+    text-decoration: none;
+    color: var(--text-color);
+}
