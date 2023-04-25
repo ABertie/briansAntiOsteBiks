@@ -3,18 +3,17 @@
 
     border: none;
     background: transparent;
-    color: var(--text-color);
 }
 
 .primaryNav {
     --bg-color: var(--mid-color);
     --text-color: var(--dark-color);
-    
+
     display: block;
-    
+
     position: absolute;
     inset: 3em 0 auto auto;
-    
+
     height: calc(100vh - 3em);
     width: 80%;
     padding: 1em;
@@ -24,20 +23,77 @@
     transition: transform .5s ease-in-out;
 }
 
-.primaryNav--show {    
+.primaryNav--show {
     transform: translateX(0);
 }
 
 .primaryNav__menu {
-/*     display: flex;
-    justify-content: space-between;
-    */
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: .5em;
     list-style: none;
 }
 
-.primaryNav__Link{
+.primaryNav__Link {
     text-decoration: none;
+}
+
+.primaryNav__form{
+    --text-color: var(--dark-color);
+    --bg-color: var(--brand-color);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .2em;
+
+    padding: .2em;
+    border-radius: 5px;
+    background-color: var(--bg-color);
+
+    opacity: 50%;
+}
+
+.primaryNav__search {
+    width: 100%;
+    padding: .2em;
+    border: none;
+    background-color: transparent;
+
     color: var(--text-color);
+}
+
+.primaryNav__search::placeholder{
+    --text-color: var(--mid-color);
+    
+    color: var(--text-color);
+}
+
+@media screen and (min-width: 768px) {
+    .primaryNav {
+        --text-color: var(--mid-color);
+        --bg-color: transparent;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        position: static;
+
+        height: auto;
+        width: auto;
+        padding: 0;
+
+        transform: translateX(0);
+        transition: none;
+    }
+
+    .primaryNav__menu {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .burgerMenuButton {
+        display: none;
+    }
 }

@@ -5,7 +5,16 @@
 }
 
 body {
-    font-size: 1.2em;
+    --bg-color: var(--light-color);
+
     overflow-x: hidden;
+    
     width: 100%;
+    background-color: var(--bg-color);
+    
+    font-size: 1.2em;
 } 
+
+h1, p, a, svg, i, .burgerMenuButton {
+    color: var(--text-color);
+}
