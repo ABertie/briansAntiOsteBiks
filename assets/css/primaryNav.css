@@ -3,6 +3,8 @@
 
     border: none;
     background: transparent;
+
+    font-size: 1.5em;
 }
 
 .primaryNav {
@@ -39,14 +41,14 @@
 }
 
 .primaryNav__form{
-    --text-color: var(--dark-color);
+    --text-color: var(--mid-color);
     --bg-color: var(--brand-color);
 
     display: flex;
     justify-content: center;
     align-items: center;
     gap: .2em;
-
+    
     padding: .2em;
     border-radius: 5px;
     background-color: var(--bg-color);
@@ -56,7 +58,7 @@
 
 .primaryNav__search {
     width: 100%;
-    padding: .2em;
+    padding: .2em .2em 0;
     border: none;
     background-color: transparent;
 
@@ -70,6 +72,10 @@
 }
 
 @media screen and (min-width: 768px) {
+    .burgerMenuButton {
+        display: none;
+    }
+
     .primaryNav {
         --text-color: var(--mid-color);
         --bg-color: transparent;
@@ -93,7 +99,7 @@
         align-items: center;
     }
 
-    .burgerMenuButton {
-        display: none;
+    .primaryNav__form{
+        order: 1;
     }
 }

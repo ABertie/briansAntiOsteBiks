@@ -10,20 +10,22 @@
     <!-- stylesheet -->
     <link rel="stylesheet" href="./style.css">
 
+    <!-- outside stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
     <header class="siteHeader">
         <a href="./" class="siteHeader__brand">Brians Anti Ostebiks</a>
         <button class="burgerMenuButton">
-            <i data-feather="menu"></i>
+            <i class="fa-solid fa-bars"></i>
             <span class="sr-only">Menu</span>
         </button>
         <nav class="primaryNav" aria-hidden="true">
             <a href="#content" class="sr-only">Jump to content</a>
             <menu class="primaryNav__menu">
                 <form action="index.html" class="primaryNav__form">
-                    <i data-feather="search"></i>
+                    <i class="fa-solid fa-magnifying-glass"></i>
                     <input type="search" class="primaryNav__search" placeholder="Search">
                 </form>
                 <li class="primaryNav__menuItem"><a href="#" class="primaryNav__Link">Link 1</a></li>
@@ -32,7 +34,7 @@
             </menu>
         </nav>
     </header>
-
+    
     <main id="content">
         <section class="highlights">
             <article class="highlights__article">
@@ -62,16 +64,18 @@
             </article>
         </section>
     </main>
-
+    
     <!-- */ sript -->
-    <!-- outside -->
-    <script src="https://unpkg.com/feather-icons"></script>
-    <script>
-        feather.replace()
-    </script>
     <!-- my own -->
     <script src="./assets/sript/brugerMenu.js" defer></script>
     <!-- sript /* -->
 </body>
 
 </html>
+<!--  // outside
+  <script src="https://unpkg.com/feather-icons"></script>
+<script>
+    feather.replace()
+</script>
+<i data-feather="menu"></i>
+<i data-feather="search"></i> -->
