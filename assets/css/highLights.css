@@ -22,7 +22,6 @@
 
     padding: 1em;
     border-radius: 10px;
-    background-color: var(--bg-color);
 }
 
 .highlights__image {
@@ -30,6 +29,10 @@
     height: 10em;
     border-radius: 5px;
     object-fit: cover;
+}
+
+.highlights__heading{
+    --text-color: var(--brand-color);
 }
 
 @media screen and (min-width: 768px){

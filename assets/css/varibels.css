@@ -1,8 +1,11 @@
 :root {
-    --brand-color: #EFCE3F;
-    --dark-color: #292033;
-    --mid-color: #6E5480;
+    --brand-color: #F6DC3B;
+    --dark-color: #10113C;
+    --mid-color: #747898;
     --light-color: #FFFFFF;
 
-    
+    --brand-color-blurred: #F6DC3BAA;
+    --dark-color-blurred: #10113CAA;
+    --mid-color-blurred: #747898AA;
+    --light-color-blurred: #FFFFFFAA;
 }
