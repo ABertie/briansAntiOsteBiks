@@ -15,6 +15,6 @@ body {
     font-size: 1.2em;
 } 
 
-h1, p, a, svg, i, .burgerMenuButton {
+h1, p, a, svg, i, button, label, li, input::placeholder {
     color: var(--text-color);
 }

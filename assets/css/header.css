@@ -1,5 +1,5 @@
 .siteHeader{
-    --bg-color: var(--dark-color);
+    --bg-color: var(--mid-color);
     --text-color: var(--brand-color);
 
     display: flex;

@@ -34,7 +34,7 @@
             </menu>
         </nav>
     </header>
-    
+
     <main id="content">
         <section class="highlights">
             <article class="highlights__article">
@@ -59,12 +59,38 @@
                 <p class="highlights__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ullam,
                     ducimus quidem ut ratione hic nostrum fugiat veritatis accusantium neque officiis nemo soluta libero
                     minima quia vero perferendis totam a!
-                    hej
                 </p>
             </article>
         </section>
     </main>
-    
+    <footer>
+        <form class="submitForm" action="index.html">
+            <div class="submitForm__field">
+                <label for="submitForm__name" class="submitForm__label">Navn:</label>
+                <input type="text" id="submitForm__name" class="submitForm__input" name="navn" placeholder="Navn">
+                <span class="submitForm__massage"></span>
+            </div>
+            <div class="submitForm__field">
+                <label for="submitForm__email" class="submitForm__label">Email:</label>
+                <input type="email" id="submitForm__email" class="submitForm__input" name="email" placeholder="Email">
+                <span class="submitForm__massage"></span>
+            </div>
+            <div class="submitForm__field">
+                <label for="submitForm__phoneNumber" class="submitForm__label">Telefon:</label>
+                <input type="number" id="submitForm__phoneNumber" class="submitForm__input" name="phoneNumber" placeholder="Telefonnummer">
+                <span class="submitForm__massage"></span>
+            </div>
+            <button class="submitForm__button">Submit</button>
+        </form>
+        <div class="copyright">
+            <ul>
+                <li>©Brians Anti Ostebiks 2023</li>
+                <li>Placeholdervej 8</li>
+                <li>0000 Andeby</li>
+            </ul>
+        </div>
+    </footer>
+
     <!-- */ sript -->
     <!-- my own -->
     <script src="./assets/sript/brugerMenu.js" defer></script>

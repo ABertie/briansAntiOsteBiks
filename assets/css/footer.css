@@ -1,0 +1,32 @@
+footer {
+    --bg-color: var(--dark-color);
+    --text-color: var(--mid-color);
+
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+
+    padding: 2em;
+    background-color: var(--bg-color);
+
+    font-size: 0.7em;
+}
+
+.copyright{
+    width: 100%;
+}
+
+.copyright ul{
+    list-style-type: none;
+}
+
+
+@media screen and (min-width: 768px) {
+    footer{
+       flex-direction: row;
+    }
+
+    .copyright{
+        text-align: end;
+    }
+}
