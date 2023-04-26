@@ -7,8 +7,6 @@ footer {
     gap: 4em;
     
     padding: 2em;
-    
-    font-size: 2vh;
 }
 
 .copyright{
@@ -23,6 +21,7 @@ footer {
 @media screen and (min-width: 768px) {
     footer{
        flex-direction: row;
+       gap: 0;
     }
 
     .copyright{

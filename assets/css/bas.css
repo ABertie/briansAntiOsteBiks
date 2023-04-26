@@ -14,5 +14,9 @@ body {
     
     width: 100%;
     
-    font-size: 1.2em;
+    font-size: 3vh;
 } 
+
+footer{
+    font-size: 2vh;
+}
