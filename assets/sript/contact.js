@@ -7,11 +7,14 @@ const SUBMITFORM__IMPUT__TLF = SUBMITFORM.querySelector("#submitForm__tlf")
 SUBMITFORM.addEventListener("submit", function(event){
     event.preventDefault();
     if (SUBMITFORM__IMPUT__NAME.value == "") {
-        alert("Navn er ikke udfyldt")
-    } else if (SUBMITFORM__IMPUT__EMAIL.value == "") {
-        alert("Email er ikke udfyldt")
-    } else if (SUBMITFORM__IMPUT__TLF.value == "") {
-        alert("telefon nummer er ikke udfyldt")
+        let massager = SUBMITFORM.querySelector("#submitForm__nameMassage")
+        massager.innerHTML = "Navn er ikke udfyldt!"
+    } if (SUBMITFORM__IMPUT__EMAIL.value == "") {
+        let massager = SUBMITFORM.querySelector("#submitForm__emailMassage")
+        massager.innerHTML = "Email er ikke udfyldt!"
+    } if (SUBMITFORM__IMPUT__TLF.value == "") {
+        let massager = SUBMITFORM.querySelector("#submitForm__tlfMassage")
+        massager.innerHTML = "Telefonnummer er ikke udfyldt!"
     } else {
         SUBMITFORM.submit()
     }

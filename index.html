@@ -62,23 +62,29 @@
                 </p>
             </article>
         </section>
+        <section class="carousel">
+            <button class="carousel__backButton"><i class="fa-solid fa-circle-chevron-left"></i></button>
+            <article class="carosel__slider"></article>
+            <button class="carousel__forwardButton"><i class="fa-solid fa-circle-chevron-right"></i></button>
+            <nav class="carousel__spots"></nav>
+        </section>
     </main>
     <footer>
         <form class="submitForm" action="index.html">
             <div class="submitForm__field">
                 <label for="submitForm__name" class="submitForm__label">Navn:</label>
                 <input type="text" id="submitForm__name" class="submitForm__input" name="name" placeholder="Navn">
-                <span class="submitForm__massage"></span>
+                <span class="submitForm__massage" id="submitForm__nameMassage"></span>
             </div>
             <div class="submitForm__field">
                 <label for="submitForm__email" class="submitForm__label">Email:</label>
                 <input type="email" id="submitForm__email" class="submitForm__input" name="email" placeholder="Email">
-                <span class="submitForm__massage"></span>
+                <span class="submitForm__massage" id="submitForm__emailMassage"></span>
             </div>
             <div class="submitForm__field">
                 <label for="submitForm__phoneNumber" class="submitForm__label">Telefon:</label>
                 <input type="number" id="submitForm__tlf" class="submitForm__input" name="phoneNumber" placeholder="Telefonnummer">
-                <span class="submitForm__massage"></span>
+                <span class="submitForm__massage" id="submitForm__tlfMassage"></span>
             </div>
             <button class="submitForm__button">Submit</button>
         </form>
@@ -94,7 +100,11 @@
     <!-- */ sript -->
     <!-- my own -->
     <script src="./assets/sript/brugerMenu.js" defer></script>
-    <script src="./assets/sript/contact.js"></script>
+    <script src="./assets/sript/carousel.js" defer></script>
+    <script>
+        // ABertieCarousel()
+    </script>
+    <script src="./assets/sript/contact.js" defer></script>
     <!-- sript /* -->
 </body>
 
