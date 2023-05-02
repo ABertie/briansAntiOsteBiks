@@ -67,7 +67,7 @@
                 if (movingDeraction === 'aninmationLeft') {var newMovingDeraction = 'aninmationRight'}
                 if (movingDeraction === 'aninmationRight') {var newMovingDeraction = 'aninmationLeft'}
                 SLIDER.classList.add(newMovingDeraction)
-                SLIDER.addEventListener("aninmationend", function() {SLIDER.classList.remove(newMovingDeraction)}
+                SLIDER.addEventListener("aninmationend", function() {SLIDER.classList.remove(newMovingDeraction)})
             })
 /*             if (SLIDER.classList.contains('aninmationLeft')) {
                 SLIDER.classList.remove('aninmationLeft')
