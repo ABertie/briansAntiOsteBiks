@@ -70,23 +70,27 @@
         </section>
     </main>
     <footer>
-        <form class="submitForm" action="index.html">
+        <form class="submitForm" action="index.html" novalidate>
             <div class="submitForm__field">
                 <label for="submitForm__name" class="submitForm__label">Navn:</label>
-                <input type="text" id="submitForm__name" class="submitForm__input" name="name" placeholder="Navn">
-                <span class="submitForm__massage" id="submitForm__nameMassage"></span>
+                <input type="text" id="submitForm__name" class="submitForm__input" name="name" placeholder="Navn" required>
+                <span class="submitForm__massage"></span>
             </div>
             <div class="submitForm__field">
                 <label for="submitForm__email" class="submitForm__label">Email:</label>
-                <input type="email" id="submitForm__email" class="submitForm__input" name="email" placeholder="Email">
-                <span class="submitForm__massage" id="submitForm__emailMassage"></span>
+                <input type="email" id="submitForm__email" class="submitForm__input" name="email" placeholder="Email" required>
+                <span class="submitForm__massage"></span>
             </div>
             <div class="submitForm__field">
                 <label for="submitForm__phoneNumber" class="submitForm__label">Telefon:</label>
-                <input type="number" id="submitForm__tlf" class="submitForm__input" name="phoneNumber" placeholder="Telefonnummer">
-                <span class="submitForm__massage" id="submitForm__tlfMassage"></span>
+                <input type="tel" id="submitForm__tlf" class="submitForm__input" name="phoneNumber" placeholder="Telefonnummer" required>
+                <span class="submitForm__massage"></span>
             </div>
-            <button class="submitForm__button">Submit</button>
+            <div class="submitForm__field">
+                <label for="submitForm__text" class="submitForm__label">Besked:</label>
+                <input type="text" id="submitForm__text" class="submitForm__input" name="text" placeholder="Telefonnummer">
+            </div>
+            <button type="submit" class="submitForm__button">Submit</button>
         </form>
         <div class="copyright">
             <ul>
