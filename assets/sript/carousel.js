@@ -4,21 +4,20 @@
         const SLIDER = CAROUSEL.querySelector(".carosel__slider")
         const FORWARD = CAROUSEL.querySelector(".carousel__forwardButton")
         const NAV = CAROUSEL.querySelector(".carousel__spots")
-        const SLIDE = []
+        const SLIDE = SLIDER.querySelectorAll(".carousel__card")
 
         var index = 0
-        SLIDER.innerHTML = (SLIDE[index])
+        SLIDER.innerHTML = SLIDE[index].innerHTML
 
-        SLIDE.forEach(function () {
+        for (let i = 0; i < SLIDE.length; i++) {
             const SPOT = document.createElement("button")
             SPOT.classList.add('carousel__button')
             NAV.appendChild(SPOT)
-        })
-        highlightButton()
+            highlightButton()
+        }
 
         BACK.addEventListener("click", moveBack)
         FORWARD.addEventListener("click", moveForward)
-        SLIDE.addEventListener("animationend", shuffeleAnimation)
 
         function highlightButton() {
             const SPOTS = NAV.querySelectorAll("button")
@@ -31,23 +30,24 @@
 
                 button.addEventListener("click", function () {
                     if (index > i) {
-                        SLIDE.classList.add('aninmationClassRight')
+                        SLIDER.classList.add('aninmationRight')
                     } else {
-                        SLIDE.classList.add('aninmationClassLeft')
+                        SLIDER.classList.add('aninmationLeft')
                     }
                     index = i
                     highlightButton()
+                    shuffeleAnimation()
                 })
             })
-        }
+        } 
 
         function moveBack() {
             if (index === 0) {
                 index = SLIDE.length
             }
             index--
-            SLIDE.classList.add('aninmationClassRight')
             highlightButton()
+            shuffeleAnimation()
         }
 
         function moveForward() {
@@ -55,25 +55,28 @@
             if (SLIDE.length === index) {
                 index = 0
             }
-            SLIDE.classList.add('aninmationClassLeft')
             highlightButton()
+            shuffeleAnimation('aninmationLeft')
         }
 
-        function shuffeleAnimation() {
-            if (SLIDE.classList.contains('aninmationClassRight')) {
-                SLIDE.classList.remove('aninmationClassRight')
-                SLIDER.innerHTML = (SLIDE[index])
-                SLIDE.classList.add('aninmationClassLeft')
-            } else {
-                SLIDE.classList.remove('aninmationClassLeft')
-            }
-
-            if (SLIDE.classList.contains('aninmationClassLeft')) {
-                SLIDE.classList.remove('aninmationClassLeft')
-                SLIDER.innerHTML = (SLIDE[index])
-                SLIDE.classList.add('aninmationClassRight')
-            } else {
-                SLIDE.classList.remove('aninmationClassRight')
-            }
+        function shuffeleAnimation(movingDeraction) {
+            SLIDER.classList.add(movingDeraction)
+            SLIDER.addEventListener("aninmationend", function() {
+                SLIDER.classList.remove(movingDeraction)
+                SLIDER.innerHTML = SLIDE[index].innerHTML
+                if (movingDeraction === 'aninmationLeft') {var newMovingDeraction = 'aninmationRight'}
+                if (movingDeraction === 'aninmationRight') {var newMovingDeraction = 'aninmationLeft'}
+                SLIDER.classList.add(newMovingDeraction)
+                SLIDER.addEventListener("aninmationend", function() {SLIDER.classList.remove(newMovingDeraction)}
+            })
+/*             if (SLIDER.classList.contains('aninmationLeft')) {
+                SLIDER.classList.remove('aninmationLeft')
+                SLIDER.innerHTML = SLIDE[index].innerHTML
+                SLIDER.classList.add('aninmationRight')
+                
+                SLIDER.querySelector(".aninmationRight").addEventListener("animationend", function() {
+                    SLIDER.classList.remove('aninmationRight')
+                })
+            }  */
         }
 // })()

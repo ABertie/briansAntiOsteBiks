@@ -24,3 +24,48 @@
 .carousel__forwardButton{
     grid-area: 1/3/2/4;
 }
+
+.carousel__spots{
+    grid-area: 2/1/3/4;
+
+    display: flex;
+    justify-content: center;
+    gap: .5em;
+
+    padding: .5em;
+}
+
+.carousel__button{
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background: var(--mid-color);
+}
+
+.carousel__highlight{
+    background: var(--dark-color);
+}
+
+.aninmationRight{
+    animation: moveRight .4s linear;
+}
+@keyframes moveRight {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(150%);
+    }
+  }
+
+.aninmationLeft{
+    animation: moveLeft .4s linear;
+}
+@keyframes moveLeft {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-150%);
+    }
+  }
